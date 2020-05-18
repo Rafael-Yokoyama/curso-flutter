@@ -4,4 +4,4 @@
  
 ### Demonstração do app
  
- ![Demonstração](https://github.com/Rafael-Yokoyama/curso-flutter/blob/master/Animated%20GIF-downsized.gif)
+ ![Demonstração](https://github.com/Rafael-Yokoyama/curso-flutter/blob/master/d.gif.gif)
