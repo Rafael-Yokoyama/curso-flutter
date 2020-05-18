@@ -2,6 +2,6 @@
  
  Projeto realizado em flutter baseado no jogo "frases do dia".
  
-# Demonstração do app
+### Demonstração do app
  
  ![Demonstração](https://github.com/Rafael-Yokoyama/curso-flutter/blob/master/Animated%20GIF-downsized.gif)
