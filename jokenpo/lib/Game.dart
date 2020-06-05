@@ -14,6 +14,7 @@ class _GameState extends State<Game> {
   
   var _imagemApp = AssetImage("image/padrao.png");
   var _mensagem = "Escolha uma opção a baixo";
+  var _fala = "   ";
 
   void _opcaoselecionada(String escolhadoUsuario){
 
@@ -22,7 +23,7 @@ class _GameState extends State<Game> {
   var num = Random().nextInt(3);
   var escolhaApp = opcoes[num];
 
-  print("Escolha do app " +escolhaApp);
+  print("Escolha do app :" +escolhaApp);
   print(" Escolha do usuario" +escolhadoUsuario);
 
 
@@ -30,6 +31,8 @@ class _GameState extends State<Game> {
      case "pedra":
      setState(() {
        this._imagemApp = AssetImage("image/pedra.png");
+       this._fala = "PEDRA";
+      
        
      });
        
@@ -38,6 +41,8 @@ class _GameState extends State<Game> {
        case "papel":
      setState(() {
        this._imagemApp = AssetImage("image/papel.png");
+      this._fala = "PAPEL";
+       
        
      });
        
@@ -45,15 +50,15 @@ class _GameState extends State<Game> {
        case "tesoura":
      setState(() {
        this._imagemApp = AssetImage("image/tesoura.png");
-       " tesoura";
+       this._fala = "TESOURA";
+       
        
      });
        
        break;
     
    }
-      // validção do ganhador 
-      // usuario ganhador 
+    
       if(
 
         (escolhadoUsuario == "pedra"  && escolhaApp == "tesoura")   || 
@@ -61,7 +66,7 @@ class _GameState extends State<Game> {
         (escolhadoUsuario == "papel"  && escolhaApp == "pedra") 
         
         
-      //app ganhador 
+ 
       ) {
         setState(() {
           this._mensagem = "Parabéns!!!   Você venceu ";
@@ -92,13 +97,11 @@ class _GameState extends State<Game> {
 
         setState(() {
           this._mensagem = "  Você empatou ;] ";
+
+           
           
         });
       }
-  
-       
-      
-
 
 
 
@@ -123,7 +126,41 @@ class _GameState extends State<Game> {
         //linha 3 imagens 
         Padding(
           padding: EdgeInsets.only(top: 20,bottom: 30),
-          child:Text("escolha do app",
+          child:Text("Escolha do app foi :",
+
+          textAlign: TextAlign.center,
+          style: TextStyle( 
+            fontSize: 20,
+            fontWeight:FontWeight.bold
+            
+         
+          ),
+          ) ,
+        ),
+         Padding(
+          padding: EdgeInsets.only(top: 1,bottom: 8),
+          child:Text(
+            this._fala,
+            textAlign: TextAlign.center,
+          style: TextStyle( 
+            fontSize: 25,
+            fontWeight:FontWeight.bold 
+
+        
+    
+          )
+          ) ,
+        ),
+
+
+
+      Image(image: this._imagemApp,),
+      Padding(
+          padding: EdgeInsets.only(top: 20,bottom: 30),
+          child:Text(
+            this._mensagem,
+        
+
           textAlign: TextAlign.center,
           style: TextStyle( 
             fontSize: 20,
@@ -134,24 +171,14 @@ class _GameState extends State<Game> {
           ) ,
         ),
 
-      Image(image: this._imagemApp,),
-      Padding(
-          padding: EdgeInsets.only(top: 20,bottom: 30),
-          child:Text(
-            this._mensagem,
-          textAlign: TextAlign.center,
-          style: TextStyle( 
-            fontSize: 20,
-            fontWeight:FontWeight.bold
-            
-         
-          ),
-          ) ,
-        ),
+
+        
       Row(children: <Widget>[
         GestureDetector(
+          
           onTap:() => _opcaoselecionada("pedra"),
-          child:Image.asset("image/pedra.png",height: 50,) ,
+          child:Image.asset("image/pedra.png",height: 50,)
+          ,
         ),
         GestureDetector(
           onTap:() => _opcaoselecionada("papel"),
@@ -162,6 +189,11 @@ class _GameState extends State<Game> {
           onTap:() => _opcaoselecionada("tesoura"),
           child:Image.asset("image/tesoura.png",height: 50,) ,
         ),
+         
+       
+         
+            
+            
         
         
 
