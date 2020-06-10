@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+
+
 class texto extends StatefulWidget {
   @override
   _textoState createState() => _textoState();
@@ -8,16 +10,52 @@ class texto extends StatefulWidget {
 class _textoState extends State<texto> {
 
   TextEditingController _controlleralcool = TextEditingController ();
-   TextEditingController _controllergasolina = TextEditingController ();
-  
-  
+  TextEditingController _controllergasolina = TextEditingController ();
+  String _textoresultado ="";
 
+   void _Calcular() {
+     double precoAlcool     = double.tryParse(_controlleralcool.text  ) ;
+      double precoGasolina    = double.tryParse(_controllergasolina.text  ) ;
+
+
+     if( precoAlcool == null || precoGasolina == null){
+
+       setState(() {
+
+               _textoresultado = "Número inválido,digite números maiores que 0 e utilizando (.)" ;
+         
+       });
+      
+
+     }else {
+
+       if( (precoAlcool / precoGasolina) >= 0.7){
+         setState(() {
+           _textoresultado = "Melhor abastecer com Gasolina";
+
+
+           
+         });
+         
+
+       }else{
+         _textoresultado ="Melhor abastecer com Álcool";
+
+       }
+       
+     }
+     
+   }
+  
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:AppBar(
-        title: Text("Álcool ou Gasolina ")
+        title: Text("Álcool ou Gasolina "),
+        
+
+    
 
       ) ,
       body: Container(
@@ -39,15 +77,14 @@ class _textoState extends State<texto> {
                 fontSize : 20 ,
                 fontWeight: FontWeight.bold 
 
-
               ),
               
               ),
             ),
             TextField(
-              keyboardType: TextInputType.number,
+              keyboardType: TextInputType.phone,
               decoration: InputDecoration(
-                labelText:" Preço Alcool, ex 1.59"
+                labelText:" Preço Álcool, ex 1.59"
                 
         
               ),
@@ -61,11 +98,11 @@ class _textoState extends State<texto> {
                          
 
             TextField(
-              keyboardType: TextInputType.number,
+              keyboardType: TextInputType.phone,
               decoration: InputDecoration(
-                labelText:" Preço gasolina, ex 3.59"
-                
-        
+                labelText:" Preço gasolina, ex 3.59"  
+
+                            
               ),
               style: TextStyle(
                   fontSize: 22),
@@ -73,90 +110,55 @@ class _textoState extends State<texto> {
               controller: _controllergasolina,
 
 
-
-
             ),
             Padding(
               padding: EdgeInsets.only(top:10),
               child: RaisedButton(
                 color: Colors.blue,
-                textColor: Colors.black,
+                textColor: Colors.white,
                 padding: EdgeInsets.all(20),
-                child: Text("Calcular ",
+                child: Text("CALCULAR ",
                 style: TextStyle(
 
                   fontSize : 20 ,
 
-
-
+                  
                 ),
                 
                 ),
-                onPressed: (){ }
 
-                
-
-
+                onPressed: _Calcular
 
              
-
-              ,),
+              ),
 
             ),
             Padding(
               padding: EdgeInsets.only(top:20),
             child: Text(
 
-                "Resultado",
+                _textoresultado,
                 style: TextStyle(
                   fontSize : 22,
                   fontWeight : FontWeight.bold
                 ),
               ),
-              
-              
-              
+            
+                                       
               )
-            
-
-            
-
-
+                      
 
           ],),
           
 
-
-
         ),
           
-
-
-
-          
-
-
-
-
-
+         
       ),
-    
-
-
-
-
-
-   
+      
      
-
-
     );
 
-
-
-
-      }
-    
-      
+      }        
     
 }

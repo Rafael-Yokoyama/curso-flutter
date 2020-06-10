@@ -4,7 +4,15 @@ import 'package:flutter/material.dart';
 void main() {
   var texto2 = texto;
     runApp(
-      MaterialApp(home:texto() ,)
+      MaterialApp(
+        
+        debugShowCheckedModeBanner: false,
+             
+        home:texto() , 
+
+        )
+      
+      
     
   );
   
