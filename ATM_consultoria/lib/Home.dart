@@ -1,6 +1,22 @@
 
 
+
+
+
+
+
+
+
+import 'package:ATM_consultoria/telacliente.dart';
+import 'package:ATM_consultoria/telacontato.dart';
+import 'package:ATM_consultoria/telaempresa.dart';
+import 'package:ATM_consultoria/telaservico.dart';
 import 'package:flutter/material.dart';
+
+
+
+
+
 
 
 class Home extends StatefulWidget {
@@ -8,12 +24,52 @@ class Home extends StatefulWidget {
   _HomeState createState() => _HomeState();
 }
 
-void _abrirEmpresa(){
-
-
-}
-
+                                 
 class _HomeState extends State<Home> {
+
+  void _abrirEmpresa(){
+
+    Navigator.push(
+      context, 
+      MaterialPageRoute(builder: (context)=> telaempresa() )); 
+          
+
+  }
+  void _abrirServico(){
+
+    Navigator.push(
+      context, 
+      MaterialPageRoute(builder: (context)=> telaservico ())); 
+          
+
+  }
+  void _abrirCliente(){
+
+    Navigator.push(
+      context, 
+      MaterialPageRoute(builder: (context)=> telacliente() )); 
+          
+
+  }
+  void _abrirContato(){
+
+    Navigator.push(
+      context, 
+      MaterialPageRoute(builder: (context)=> telacontato() )); 
+          
+
+  }
+
+
+
+
+
+
+
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,15 +120,16 @@ class _HomeState extends State<Home> {
                   
                 children: <Widget>[
                   GestureDetector(
-                    onTap: _abrirEmpresa,
+                    onTap: _abrirCliente,
                     child: Image.asset("images/menu_cliente.png"),
 
                   ),
                   GestureDetector(
-                    onTap: _abrirEmpresa,
+                    onTap: _abrirContato,
                     child: Image.asset("images/menu_contato.png"),
 
                   ),
+                  
                  
                 
 
