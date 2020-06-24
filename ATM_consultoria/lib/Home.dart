@@ -98,7 +98,7 @@ class _HomeState extends State<Home> {
 
                   ),
                   GestureDetector(
-                    onTap: _abrirEmpresa,
+                    onTap: _abrirServico,
                     child: Image.asset("images/menu_servico.png"),
 
                   ),
