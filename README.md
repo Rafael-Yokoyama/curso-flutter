@@ -15,3 +15,6 @@ https://www.udemy.com/course/desenvolvimento-android-e-ios-com-flutter/
 
 6 - [BITCOIN](https://github.com/Rafael-Yokoyama/curso-flutter/tree/master/BITCOIN)
 
+7 - [youtube](https://github.com/Rafael-Yokoyama/curso-flutter/tree/master/youtube)
+
+
