@@ -1,6 +1,8 @@
 import 'package:http/http.dart' as  http;
 import 'dart:convert';
 
+import 'Model/Video.dart';
+
 
 const CHAVE_YOUTUBE_API = "AIzaSyAkMMo3terz7SgfWj7DZJC5rtFrMXgGhAk";
 const ID_CANAL = "UCVHFbqXqoYvEWM1Ddxl0QDg";
@@ -25,7 +27,22 @@ class Api{
 
 
       Map<String, dynamic> dadosJson = json.decode( response.body );
-      print("resultado: " + dadosJson["items"][2]["snippet"]["title"].toString() );
+
+      List<Video> videos =dadosJson["items"].map<Video>(
+        (map){
+          return Video.fromJson(map);
+
+
+        }
+
+
+      ).toList();
+      for( var video in videos ){
+        print("resultado: " + video.titulo );
+      }
+
+
+      //print("resultado: " + dadosJson["items"][2]["snippet"]["title"].toString() );
 
     }else{
 
