@@ -1,16 +1,55 @@
-# ATM_consultoria
 
-A new Flutter project.
 
-## Getting Started
+# Design + Funcionalidade
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+### ATM_consultoria
+![Badge](https://img.shields.io/static/v1?label=dart&message=87.1%&color=blue&style=flat&logo=) 
+  ![Badge](https://img.shields.io/static/v1?label=license&message=MIT&color=green&style=flat&logo=)  
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+   
+   
+  
+ ![](https://github.com/Rafael-Yokoyama/curso-flutter/blob/master/ATM_consultoria/gif.foto.gif)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+#  Tecnologias :rocket:  
+
+
+Este projeto foi desenvolvido com as seguintes tecnologias:
+
+
+-[Flutter](https://flutter.dev/?gclid=Cj0KCQjww_f2BRC-ARIsAP3zarEE3bqE6AWxyHKFhCNJTBwh89Q_ktFTvn-S0uAw324qo0gzXY0VfTUaAluTEALw_wcB&gclsrc=aw.ds)
+
+-[Dart](https://dart.dev/get-dart)
+
+# Sobre o Projeto :moneybag:
+Este é um projeto do curso https://www.udemy.com/course/desenvolvimento-android-e-ios-com-flutter/ cujo objetivo é realizar  o desenvolvimento de um aplicativo mobile de uma pequena empresa,mostrando um pouco sobre a empresa e seus serviços.
+
+# Como executar o projeto  :iphone:
+Para clonar e executar este aplicativo, você precisará ter o  [Git](https://git-scm.com/) ,[Flutter](https://flutter.dev/?gclid=Cj0KCQjww_f2BRC-ARIsAP3zarEE3bqE6AWxyHKFhCNJTBwh89Q_ktFTvn-S0uAw324qo0gzXY0VfTUaAluTEALw_wcB&gclsrc=aw.ds), [VS Code](https://code.visualstudio.com/) instalado no seu computador. Na sua linha de comando:
+
+### Clone este repositório
+$ git clone https://github.com/Rafael-Yokoyama/curso-flutter.git                                                                                          
+
+### Vá para o repositório 
+$ cd ATM_consultoria
+
+### Instalar dependências
+ $ pub get
+
+###  Execute o aplicativo 
+flutter run --release  
+
+# Licença 📋
+
+Este projeto está sob a licença MIT.CLique na [LICENÇA](https://github.com/Rafael-Yokoyama/curso-flutter/blob/master/LICENSE) para saber mais .
+
+
+# Desenvolvedores ![](https://github.githubassets.com/images/icons/emoji/octocat.png) 
+[<img src="https://avatars0.githubusercontent.com/u/60978293?s=460&u=0db04c04e1f0270a31e1e06e878aa156bf50154f&v=4" width=115 > <br> <sub> Rafael Yokoyama </sub>](https://github.com/Rafael-Yokoyama) 
+
+
+
+
+
